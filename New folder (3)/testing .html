@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .search-container form {
+            display: flex;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #b94429;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #searchResults {
+            margin-top: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search-container">
+        <form id="searchForm" onsubmit="performSearch(); return false;">
+            <input type="text" id="searchInput" placeholder="Search your Restaurant.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <div id="searchResults"></div>
+
+    <script>
+        var restaurants = [
+            { name: "Restaurant A", description: "Best food in Lucknow!" },
+            { name: "Restaurant B", description: "Delicious dishes served here." },
+            // Add more restaurant data as needed
+        ];
+
+        function performSearch() {
+            var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            var results = restaurants.filter(function (restaurant) {
+                return restaurant.name.toLowerCase().includes(searchTerm) || restaurant.description.toLowerCase().includes(searchTerm);
+            });
+
+            displaySearchResults(results);
+        }
+
+        function displaySearchResults(results) {
+            var resultsContainer = document.getElementById("searchResults");
+            resultsContainer.innerHTML = "";
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = "No results found.";
+                return;
+            }
+
+            results.forEach(function (restaurant) {
+                var restaurantDiv = document.createElement("div");
+                restaurantDiv.innerHTML = "<h3>" + restaurant.name + "</h3><p>" + restaurant.description + "</p>";
+                resultsContainer.appendChild(restaurantDiv);
+            });
+        }
+    </script>
+</body>
+</html>

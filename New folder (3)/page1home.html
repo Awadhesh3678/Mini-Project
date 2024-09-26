@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body{
+           background-color:#ede0d4;
+        }
+        .map{
+            top: 80px;
+            left: 0;
+            position: relative;
+        }
+        h1{
+            color: #325365;
+            float: left;
+            font-size: 30px;
+            top: 0px;
+            position: absolute;
+            left: 80px;
+        }
+        .nav-links{
+            flex: 1;
+            text-align: center;
+            padding: 1;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 9px 12px;
+            position: relative;
+
+        }
+        .nav-links ul li a{
+            color:#325365;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #ff0000;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+
+        }
+    
+      #icon{
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      img{
+        width: 89px;
+        height: 75px;
+      }
+      .sidebar{
+            height: 100%;
+            width: 280px;
+            position: fixed;
+            z-index: 1;
+            top: 240px;
+            left: 0;
+            background-color:#c2d3b0;
+            overflow-x: hidden;
+            padding-top: px;
+            font-size: medium;
+        }
+        .sidebar a{
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 35px;
+            color: green;
+            display: block;
+
+        }
+        .sidebar a:hover{
+            color: cadetblue;
+        }
+        .search-container{
+          float: right;
+        }
+        .topnav input[type=text] {
+          padding: 6px;
+          margin-top: 4px;
+          font-size: 17px;
+          border: none;
+        }
+
+        .topnav .search-container button {
+          float: right;
+          padding: 6px 10px;
+          margin-top: 4px;
+          margin-right: 16px;
+          background:#729b2c;
+          font-size: 17px;
+          border: none;
+          cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+          background: #b8e171;
+        }
+
+        @media screen and (max-width: 600px) {
+        .topnav .search-container {
+          float: none;
+        }
+        .topnav a, .topnav input[type=text], .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type=text] {
+          border: 1px solid #ccc;  
+        }
+        }
+        .card123{
+          display: flex;
+          justify-content: space-between;
+          margin: 35px;
+        }
+        .card456{
+          display: flex;
+          justify-content: space-between;
+          margin: 35px;
+        }
+        .card789{
+          display: flex;
+          justify-content: space-between;
+          margin: 35px;
+        }
+        .card101112{
+          display: flex;
+          justify-content: space-between;
+          margin: 35px;
+        }
+        .card131415{
+          display: flex;
+          justify-content: space-between;
+          margin: 35px;
+        }
+        .card161718{
+          display: flex;
+          justify-content: space-between;
+          margin: 35px;
+        }
+        .card1920{
+          display: flex;
+          justify-content: space-between;
+          margin: 35px;
+        }
+        .flip-card {
+          width: 200px;
+          height: 220px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card2 {
+          width: 300px;
+          height: 300px;
+          margin-top:100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner2 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card2:hover .flip-card-inner2 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front2, .flip-card-back2 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front2 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back2 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card3 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner3 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card3:hover .flip-card-inner3 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front3, .flip-card-back3 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front3 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back3 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card4 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner4 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card4:hover .flip-card-inner4 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front4, .flip-card-back4 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front4 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back4 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card5 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner5 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card5:hover .flip-card-inner5 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front5, .flip-card-back5 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front5 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back5 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card6 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner6 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card6:hover .flip-card-inner6 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front6, .flip-card-back6 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front6 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back6 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card7 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner7 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card7:hover .flip-card-inner7 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front7, .flip-card-back7 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front7 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back7 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card8 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner8 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card8:hover .flip-card-inner8 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front8, .flip-card-back8 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front8 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back8 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card9 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner9 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card9:hover .flip-card-inner9 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front9, .flip-card-back9 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front9 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back9 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card10 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner10 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card10:hover .flip-card-inner10 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front10, .flip-card-back10 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front10 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back10 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card11 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner11 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card11:hover .flip-card-inner11 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front11, .flip-card-back11 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front11 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back11 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card12 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner12 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card12:hover .flip-card-inner12 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front12, .flip-card-back12 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front12 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back12 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card13 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner13 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card13:hover .flip-card-inner13 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front13, .flip-card-back13 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front13 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back13 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card14 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner14 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card14:hover .flip-card-inner14 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front14, .flip-card-back14 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front14 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back14 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card15 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner15 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card15:hover .flip-card-inner15 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front15, .flip-card-back15 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front15 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back15 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card16 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner16 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card16:hover .flip-card-inner16 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front16, .flip-card-back16 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front16 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back16 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card17 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner17 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card17:hover .flip-card-inner17 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front17, .flip-card-back17 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front17 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back17 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card18 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner18 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card18:hover .flip-card-inner18 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front18, .flip-card-back18 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front18 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back18 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card19 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner19 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card19:hover .flip-card-inner19 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front19, .flip-card-back19 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front19 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back19 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+        .flip-card20 {
+          width: 300px;
+          height: 300px;
+          margin-top: 100px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-left: 350px;
+        }
+        .flip-card-inner20 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card20:hover .flip-card-inner20 {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front20, .flip-card-back20 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front20 {
+           background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back20 {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Page2</title>
+</head>
+<body>
+    <div class="map">
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d227821.98710530254!2d80.77769949830774!3d26.848902829067065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1703253569280!5m2!1sen!2sin" width="280" height="150" style="border:0;" loading=lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+    </div>
+      <div id="icon">
+    <img src="lko_icon.2-removebg-preview.png">
+    </div>
+    <h1><b><i> Best Restaurants in Lucknow</i></b></h1>
+    <div class="nav-links">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Place</a></li>
+          <li><a href="#">Book table</a></li>
+      </ul>
+      </div>
+      <div class="sidebar">
+        <a href="#">Restaurants</a><hr>
+        <a href="#">Breakfast</a><hr>
+        <a href="#">Brunch</a><hr>
+        <a href="#">Lunch</a><hr>
+        <a href="#">Dinner</a><hr>
+        <a href="#">Dessert</a><hr>
+        <a href="#">Backeries</a><hr>
+        <a href="#">Coffee & Tea</a><hr>
+    </div>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search here.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="card123">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="PAGE3.HTML">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card2">
+      <div class="flip-card-inner2">
+        <div class="flip-card-front2">
+          <img src="milan2.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back2">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card3">
+      <div class="flip-card-inner3">
+        <div class="flip-card-front3">
+          <img src="rooca33.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back3">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="card456">
+    <div class="flip-card4">
+      <div class="flip-card-inner4">
+        <div class="flip-card-front4">
+          <img src="dastarkhwan4.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back4">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card5">
+      <div class="flip-card-inner5">
+        <div class="flip-card-front5">
+          <img src="royal-cafe-5.webp" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back5">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card6">
+      <div class="flip-card-inner6">
+        <div class="flip-card-front6">
+          <img src="sky bar6.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back6">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="card789">
+    <div class="flip-card7">
+      <div class="flip-card-inner7">
+        <div class="flip-card-front7">
+          <img src="pack n chew 7.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back7">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card8">
+      <div class="flip-card-inner8">
+        <div class="flip-card-front8">
+          <img src="marine room 8.webp" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back8">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card9">
+      <div class="flip-card-inner9">
+        <div class="flip-card-front9">
+          <img src="l14 dining9.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back9">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="card101112">
+    <div class="flip-card10">
+      <div class="flip-card-inner10">
+        <div class="flip-card-front10">
+          <img src="azrak-restaurant 10.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back10">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div><div class="flip-card11">
+      <div class="flip-card-inner11">
+        <div class="flip-card-front11">
+          <img src="sepia11.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back11">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div><div class="flip-card12">
+      <div class="flip-card-inner12">
+        <div class="flip-card-front12">
+          <img src="kava-restaurant12.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back12">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="card131415">
+    <div class="flip-card13">
+      <div class="flip-card-inner13">
+        <div class="flip-card-front13">
+          <img src="garden grille13.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back13">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card14">
+      <div class="flip-card-inner14">
+        <div class="flip-card-front14">
+          <img src="luk jin 14.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back14">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card15">
+      <div class="flip-card-inner15">
+        <div class="flip-card-front15">
+          <img src="moti mahal15.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back15">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="card161718">
+    <div class="flip-card16">
+      <div class="flip-card-inner16">
+        <div class="flip-card-front16">
+          <img src="sahib-cafe 16.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back16">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card17">
+      <div class="flip-card-inner17">
+        <div class="flip-card-front17">
+          <img src="mainland-china-17.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back17">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card18">
+      <div class="flip-card-inner18">
+        <div class="flip-card-front18">
+          <img src="musadi18.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back18">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="card1920">
+    <div class="flip-card19">
+      <div class="flip-card-inner19">
+        <div class="flip-card-front19">
+          <img src="sheroes-19.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back19">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card20">
+      <div class="flip-card-inner20">
+        <div class="flip-card-front20">
+          <img src="cappuccino20.jpg" style="width:250px;height:300px;">
+        </div>
+        <div class="flip-card-back20">
+          <h1>Tunday Kababi</h1>
+          <p>Check the famous dish of lucknow</p>
+          <p><a href="#">click on me</a></p>
+        </div>
+      </div>
+      </div>
+
+</body>
+</html>                                                                                                                                                                                                                                                                                                             

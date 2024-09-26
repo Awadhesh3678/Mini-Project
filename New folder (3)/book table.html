@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+    body{
+        background-color: #acafc1;
+    }
+    li{
+            float: right;
+        }
+        ul{
+            margin: 0%;
+            overflow: hidden;
+            list-style-type: circle;
+            position: relative;
+            position: -webkit-sticky;
+            top: 0%;
+            display: inline;
+            z-index: 1000;
+        }
+        ul li{
+            display: inline-block;
+            padding: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top:5px;
+        }
+        li a{
+            color: #1d7948;
+            text-decoration: none;
+            font-size: 24px;
+           
+        }
+        li:hover a{
+            color: #ffffff;
+            background-color: #b94429;
+            border-radius: 6px;
+        }
+        .box1{
+            padding: 30px;
+            border-radius: 12px;
+            border: 5px solid #2c3439;
+            height: 600px;
+            margin: 20px 20px 20px 20px; 
+            background-color:  #e9c2c5;
+            position: relative;
+            border-radius: 0 0 15px rgba(0,0,0,0,0.1);
+        }
+        .icon{
+            color: #1d7948;
+            margin-right: 5px;
+        }
+        h1{
+            position:absolute;
+            font-size: 30px;
+            color: #581818;
+            left:45px ;
+            top: 10px;
+        }
+        .leftside, .rightside {
+            position: absolute;
+            top: 110px;
+        }
+
+        .leftside {
+            left: 5%;
+        }
+
+        .rightside {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .rightside button {
+            margin-top: 5px;
+            margin-top: 10px; /* Adjust spacing */
+            background-color: #b94429; /* Match the hover effect color */
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .rightside button:hover {
+            background-color: #b39491; /* Darker color on hover */
+        }
+        .leftside button {
+            margin-top: 5px;
+            margin-top: 10px; /* Adjust spacing */
+            background-color: #b94429; /* Match the hover effect color */
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .leftside button:hover {
+            background-color: #b39491; /* Darker color on hover */
+        }
+        .amit{
+            position: absolute;
+            top: 160px;
+            left: 70%;
+            margin: 20px;
+        }
+        h2{
+            color: red;
+            font-size: 50px;
+        }
+        p{
+            color: #581818;
+            font-size: 30px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+        <ul>
+            <li><span class="fa fa-ellipsis-h icon"></span><a href="page2.html">Go Back</a></li>
+            
+        </ul>
+        <h1>You can book table by clicking on given link....</h1>
+        <div class="leftside">
+            <h4>Tunday kababi Restaurant</h4><button><a href="https://www.tundaykababi.com/">Click Me</a></button>
+            <h4>Rooca Restaurant</h4><button><a href="https://www.hyatt.com/hyatt-regency/en-US/lkorl-hyatt-regency-lucknow/dining">Click Me</a></button>
+            <h4>Dastarkhwan Restaurant</h4><button><a href="https://www.facebook.com/pages/Dastarkhwan/220235061322133?rf=178970782144272">Click Me</a></button>
+            <h4>Royal-Cafe</h4><button><a href="https://www.tripadvisor.in/Restaurant_Review-g297684-d8125544-Reviews-Royal_Cafe-Lucknow_Lucknow_District_Uttar_Pradesh.html">Click Me</a></button>
+            <h4>Sky-Bar</h4><button><a href="https://www.marriott.com/en-us/hotels/lkobr-renaissance-lucknow-hotel/dining/">Click Me</a></button>
+          
+            
+        </div>
+        <div class="rightside">
+            <h4>Marine Room</h4><button><a href="https://www.piccadily.co.in/lucknow-hotel/dining/marine-room-the-coffee-shop.html">Click Me</a></button>
+            <h4>Sepia Restaurant</h4><button><a href="https://www.marriott.com/en-us/hotels/lkobr-renaissance-lucknow-hotel/dining/">Click Me</a></button>
+            <h4>Garden Grille</h4><button><a href="https://www.hilton.com/en/hotels/lkogigi-hilton-garden-inn-lucknow/">Click Me</a></button>
+            <h4>Kava </h4><button><a href="https://www.marriott.com/en-us/hotels/lkofi-fairfield-lucknow/dining/">Click Me</a></button>
+            <h4>Luk-jin</h4><button><a href="https://www.hyatt.com/hyatt-regency/en-US/lkorl-hyatt-regency-lucknow/dining">Click Me</a></button>
+          
+            
+        </div>
+        <div class="amit">
+            <h2>BOOK YOUR TABLE</h2>
+            <P>Click on button for booking</P>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

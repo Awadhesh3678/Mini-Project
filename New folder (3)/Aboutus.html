@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body{
+            background-image: url(mini.1.jpg);
+        }
+        li{
+            float:right;
+        }
+        ul{
+            margin: 0%;
+            overflow: hidden;
+            list-style-type: circle;
+            position: relative;
+            position: -webkit-sticky;
+            top: 0%;
+            display: inline;
+        }
+        ul li{
+            display: inline-block;
+            padding: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            
+
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+
+        }
+        li a{
+            color: #F5D7DB;
+            text-decoration: none;
+        }
+        .content{
+            position: absolute;
+            top: 20vh;
+            left: 40%;
+            width: 35%;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+        .content h1{
+            font-size: 60px;
+            color: #E8BCB9;
+        }
+        .content p{
+            font-size: 25px;
+        }
+        img{
+            float: right;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30%;
+            animation: animate 1s ease-in-out;
+        }
+        @keyframes animate{
+            0%{
+                opacity: 0;
+                transform: scale(0.5);
+            }
+           100%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        hr{
+            background: #F5D7DB;
+        }
+        button{
+            margin-top: 20px;
+            outline: none;
+            letter-spacing: .04em;
+            font-size: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            border-radius: 15px;
+            color: #3498db;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+        @media screen and (max-width: 600px) {
+            button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+        .icon{
+            color: #F5D7DB;
+            margin-right: 5px;
+            font-size: 22px;
+        }
+        
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><span class="fa fa-phone-alt icon"></span><a href="page1contact.html">Contact</a></li>
+        <li><span class="fa fa-ellipsis-h icon"></span><a href="page1more.html">More</a></li>
+        <li><span class="fa fa-info-circle icon"></span><a href="page1about.html">About</a></li>
+        <li><span class="fa fa-home icon"></span><a class="link" href="#home">Home</a></li>
+    </ul>
+    </nav>
+    <div class="content">
+        <h1>
+            Best Restaurants In Lucknow
+        </h1>
+        <p style="color: #F3E37C;font-size: 28px;">
+            <b>Explore the Culinary Delights of Lucknow</b>
+        </p>
+        <p style="color: #F3E37C;">Welcome to Lucknow, a city known for its rich history and delectable cuisine. Indulge your taste buds in the culinary delights that the city has to offer. Here's a curated list of the best restaurants in Lucknow, promising an unforgettable dining experience.</p>
+        <button><a href="page2.html">Click Me</a></button>
+        <img src="cook chef logo clipart.png">
+    </div>
+   
+  
+
+   
+ 
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Mainland-China</title>
+    <style>
+
+body{
+            background-color:#cfe1b9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+         
+            top: 0;
+            left: 35%;
+            font-family: 'brush script mt',cursive;
+            text-align: center;
+            font-size: 110px;
+            margin-bottom: 5px;
+            color: #c1121f;
+        }
+        h3{
+            font-size: 80px;
+            text-align: center;
+            top:0;
+            margin-top: 5px;
+            color: #ae2012;
+        }
+        .column{
+            float: left;
+            width: 35%;
+            padding: 5px;
+
+        }
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        #icon{
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        #icon2{
+            position: fixed;
+            top: 0;
+            right: 0;
+        } 
+        .slider{
+            width: 60%;
+            max-width: 600px;
+            margin:0 auto 20px;
+            overflow: hidden;
+        }
+        .slide.fade {
+             display: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            max-width:100%;
+            max-height:300px;
+            margin:0 auto;
+        }
+
+        .slide.fade {
+            animation: fade 1.5s ease-in-out infinite;
+        }
+
+        @keyframes fade {
+             0%, 100% {
+             opacity: 0;
+            }
+                50% {
+                 opacity: 1;
+            }
+        }
+        .box {
+            width: 360px;
+            height: 470px;
+            padding: 10px;
+            border: 10px solid gray;
+            position: absolute;
+            left: 20px;
+            top: 900px;
+            border-radius: 12px;
+            background-color:#eecc8c;
+        }
+        .box2{
+            width: 360px;
+            height: 470px;
+            padding: 10px;
+            border: 10px solid gray;
+            position: absolute;
+            left: 550px;
+            top: 900px;
+            border-radius: 12px;
+            background-color:#eecc8c;
+        }
+        .box3{
+            width: 360px;
+            height: 470px;
+            padding: 10px;
+            border: 10px solid gray;
+            position: absolute;
+            left: 1100px;
+            top: 900px;
+            border-radius: 12px;
+            background-color:#eecc8c;
+        }
+        .fa-circle{
+            color: bisque;
+        }
+        .checked{
+            color: rgb(95, 255, 2);
+        }
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h2>Welcome to Our Restaurant</h2>
+    <div id="icon">
+        <h5>Mainland-China</h5>
+    </div>
+        <h3><b>Mainland-China</b></h3>
+    </div>
+    <div id="icon2">
+        <img style="height: 105px;width: 117px;" src="lko_icon.2-removebg-preview.png">
+    </div>
+    <div class="slider">
+        <div class="slide fade">
+            <img src="mainland-china-17.jpg">
+        </div>
+        <div class="slide fade">
+            <img src="mainland1.webp">
+        </div>
+        <div class="slide fade">
+            <img src="mainland3.jpg">
+        </div>
+        <div class="slide fade">
+            <img src="mainlnd4.jpg">
+        </div>
+        <div class="slide fade">
+            <img src="Mainland-China-2.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="color:rgb(34, 20, 20) ; font-size: 28px;"><b>Ratings and Reviews</b></h4>
+        <p style="font-size: 25px;"><b>4.0</b>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </p>
+        <p style="font-size: 19px;"><b>874 reviews</b></p>
+        <p><b>#13</b> of best restaurants in lucknow</p>
+        <hr>
+        <h5 style="line-height: 1.0;">RATINGS</h5>
+        <P style="line-height:1.0;">FOOD : <B>4.0</B>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle "></span>
+        </P>
+        <p style="line-height: 1.0;">SERVICE : <B>3.0</B>
+        <span class="fa fa-circle checked"></span>
+        <span class="fa fa-circle checked"></span>
+        <span class="fa fa-circle checked"></span>
+        <span class="fa fa-circle"></span>
+        <span class="fa fa-circle "></span>
+        </p>
+        <p style="line-height: 1.0;">VALUE : <B>4.0</B>
+        <span class="fa fa-circle checked"></span>
+        <span class="fa fa-circle checked"></span>
+        <span class="fa fa-circle checked"></span>
+        <span class="fa fa-circle checked"></span>
+        <span class="fa fa-circle"></span>
+        </p>  
+        <p style="line-height: 1.0;">ATMOSPHERE : <B>5.0</B>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle checked"></span>
+            <span class="fa fa-circle checked"></span>
+        </p>
+    </div>
+    <div class="box2">
+        <h4 style="color:rgb(34, 20, 20) ; font-size: 28px;"><b>Food and ambience</b></h4>
+        <p style="font-size: 20px; line-height: 2.5;"><b>CUISINES:</b>
+            Asian,Chinese.<br>
+            <b>SPECIAL DIETS:</b>
+            Vegetarian <br>
+            <b>MEALS:</b>
+            Lunch,Brunch,Dinner,After hour<br>
+            <b>FEATURES:</b>
+            Takeout, Seating, Table Service
+        </p>
+    </div>
+    <div class="box3">
+        <h4 style="color:rgb(34, 20, 20) ; font-size: 28px;"><b>Location and Contact</b></h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5887688012162!2d80.97080387489294!3d26.85302906265392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd34868f0963%3A0xa4eed876c0734f76!2sMainland%20China!5e0!3m2!1sen!2sin!4v1707041063669!5m2!1sen!2sin" width="340" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        <p style="font-size: 16px;"><i class="fas fa-map-marker-alt"></i> 3rd Floor, Riverside Mall Vipin Khand, Gomti Nagar, Lucknow 226010 India
+        </p>
+        <p style="font-size: 16PX;"><i class="fas fa-phone-alt"></i>  +91 88174 69499</p>
+    </div>
+    <script>
+      var slideIndex = 0;
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide fade");
+
+    if (n >= slides.length) {slideIndex = 0}
+    if (n < 0) {slideIndex = slides.length - 1}
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    slides[slideIndex].style.display = "block";  
+}
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide fade");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}    
+    x[slideIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+
+carousel();
+
+
+    </script>
+</body>
+</html>

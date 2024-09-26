@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-image: url(mini.1.jpg);
+        }
+        li{
+            float:right;
+        }
+        ul{
+            margin: 0%;
+            overflow: hidden;
+            list-style-type: circle;
+            position: relative;
+            position: -webkit-sticky;
+            top: 0%;
+            display: inline;
+        }
+        ul li{
+            display: inline-block;
+            padding: 30px;
+            font-size: 24px;
+            cursor: pointer;
+            
+
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+
+        }
+        li a{
+            color: #F5D7DB;
+        }
+        .content{
+            position: absolute;
+            top: 20vh;
+            left: 40%;
+            width: 35%;
+        }
+        .content h1{
+            font-size: 60px;
+            color: #E8BCB9;
+        }
+        .content p{
+            font-size: 25px;
+            color: #E8BCB9;
+        }
+        img{
+            float: right;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30%;
+            animation: animate 1s ease-in-out;
+        }
+        @keyframes animate{
+            0%{
+                opacity: 0;
+                transform: scale(0.5);
+            }
+           100%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        hr{
+            background: #F5D7DB;
+        }
+        button{
+            margin-top: 20px;
+            background-color: royalblue;
+            border-radius: 25px;
+            outline: none;
+            letter-spacing: .04em;
+            font-size: 20px;
+            padding: 12px 18px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">More</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Home</a></li>
+    </ul>
+    </nav>
+    <div class="content">
+        <h1>
+            Best Restaurants In Lucknow
+        </h1>
+        <p>
+            <b>Try our Best Resturants in Lucknow with all its Specialization</b>
+        </p>
+        <button><a href="page2.html">Check it</a></button>
+    </div>
+    <img src="cook chef logo clipart.png">
+    
+</body>
+</html>

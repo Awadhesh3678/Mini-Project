@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>China House</title>
+    <style>
+
+        body{
+            background-color: #cfe1b9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            color: #325365;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 35%;
+        }
+        h2{
+            font-family: 'brush script mt',cursive;
+            text-align: center;
+            font-size: 90px;
+            margin-bottom: 5px;
+            color: #e76f51;
+        }
+        h3{
+            font-size: 80px;
+            text-align: center;
+            top:0;
+            margin-top: 5px;
+            color: #78a2e6;
+        }
+        .column{
+            float: left;
+            width: 35%;
+            padding: 5px;
+
+        }
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        #icon{
+            width: 200px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #icon2{
+            height: 200px;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        } 
+        .slider{
+            width: 60%;
+            max-width: 600px;
+            margin:0 auto 20px;
+            overflow: hidden;
+        }
+        .slide.fade {
+             display: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            max-width:100%;
+            max-height:300px;
+            margin:0 auto;
+        }
+
+        .slide.fade {
+            animation: fade 2s ease-in-out infinite;
+        }
+
+        @keyframes fade {
+             0%, 100% {
+             opacity: 0;
+            }
+                50% {
+                 opacity: 1;
+            }
+        }
+        .box {
+            width: 360px;
+            height: 470px;
+            padding: 10px;
+            border: 10px solid gray;
+            position: absolute;
+            left: 20px;
+            top: 800px;
+            border-radius: 12px;
+            background-color:#eecc8c;
+        }
+        .box2{
+            width: 360px;
+            height: 470px;
+            padding: 10px;
+            border: 10px solid gray;
+            position: absolute;
+            left: 550px;
+            top: 800px;
+            border-radius: 12px;
+            background-color:#eecc8c;
+        }
+        .box3{
+            width: 360px;
+            height: 470px;
+            padding: 10px;
+            border: 10px solid gray;
+            position: absolute;
+            left: 1100px;
+            top: 800px;
+            border-radius: 12px;
+            background-color:#eecc8c;
+        }
+        .fa-circle{
+            color: bisque;
+        }
+        .checked{
+            color: rgb(223, 13, 108);
+        }
+
+
+        
+   
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1><i>Best Restaurants in Lucknow</i></h1>
+    <div>
+        <h2>Welcome to Our Restaurants </h2>
+    <div id="icon">
+        <img src="china1.jpg" >
+    </div>
+        <h3><b>China-House </b></h3>
+    </div>
+    <div id="icon2">
+        <img style="height: 105px;width: 117px;" src="china left corner.jpg">
+    </div>
+    <div class="slider">
+        <div class="slide fade">
+            <img src="china1.jpg">
+        </div>
+        <div class="slide fade">
+            <img src="china2.jpg">
+        </div>
+        <div class="slide fade">
+            <img src="china3.jpg">
+        </div>
+        <div class="slide fade">
+            <img src="china4.jpg">
+        </div>
+        <div class="slide fade">
+            <img src="china5.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="color:rgb(34, 20, 20) ; font-size: 28px;"><b>Ratings and Reviews</b></h4>
+        <p style="font-size: 25px;"><b>4.7</b>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </p>
+        <p style="font-size: 19px;"><b>1,324 reviews</b></p>
+        <p><b>#13</b> of best restaurants in lucknow</p>
+        <hr>
+        <h5 style="line-height: 1.0;">RATINGS</h5>
+        <P style="line-height:1.0;">FOOD : <B>4.0</B>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+        </P>
+        <p style="line-height: 1.0;">ATMOSPHERE : <B>3.0</B>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+        </p>
+        <p style="line-height: 1.0;">SERVICE : <B>5.0</B>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star "></span>
+        </p>
+        <p style="line-height: 1.0;">VALUE : <B>4.0</B>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        </p>  
+        
+    </div>
+    <div class="box2">
+        <h4 style="color:rgb(34, 20, 20) ; font-size: 28px;"><b>Food and ambience</b></h4>
+        <p style="font-size: 20px; line-height: 2.5;"><b>CUISINES:</b>
+             Fast-Food<br>
+            <b>SPECIAL :</b>
+            Momos<br>
+            <b>MEALS:</b>
+            Lunch,Dessert,Dinner,<br>
+            <b>Offerings:</b>
+             Coffee, Alcohol,Beer,Cocktails,Wine.
+            <b>FEATURES:</b>
+             Delivery,Take-away, Dine-in.
+        </p>
+    </div>
+    <div class="box3">
+        <h4 style="color:rgb(34, 20, 20) ; font-size: 28px;"><b>Location and Contact</b></h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1835942236!2d81.0028745748934!3d26.865907462101454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3b93538fa8d%3A0x50f96c34d36b67b!2sChina%20House!5e0!3m2!1sen!2sin!4v1704643427831!5m2!1sen!2sin" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p style="font-size: 16px;"><i class="fas fa-map-marker-alt"></i> 1st Floor, Hyatt Regency, Regency Rd, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010
+        </p>
+        <p style="font-size: 16PX;"><i class="fas fa-phone-alt"></i>05224261120</p>
+    </div>
+    <script>
+        var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slide fade");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000);    
+}
+    </script>
+</body>
+</html>
